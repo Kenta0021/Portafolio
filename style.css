@@ -229,10 +229,15 @@ footer {
 
   /*HOME*/
 
+  .home {
+    padding: 0 30px;
+  }
+
   .home__container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: auto;
   }
 
   .photo__container {
@@ -277,6 +282,7 @@ footer {
 
   .about {
     height: 75vh;
+    padding: 0 30px;
   }
 
   .about__container {
@@ -300,6 +306,7 @@ footer {
 
   .habs {
     height: 130vh;
+    padding: 0 30px;
   }
 
   .habs__title {
@@ -327,11 +334,12 @@ footer {
 
   .exp {
     height: 85vh;
+    padding: 0 30px;
   }
 
   .exp__title {
     text-align: center;
-    margin-top: 5px;
+    margin-top: 50px;
   }
 
   .exp__container {
