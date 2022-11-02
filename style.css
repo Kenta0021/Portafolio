@@ -62,7 +62,8 @@ a:hover {
   display: flex;
   width: 100%;
   height: inherit;
-  justify-content: space-between;
+  margin-top: 0.5rem;
+  justify-content: end;
 }
 
 .navbar__menu {
@@ -297,6 +298,10 @@ footer {
 
   /*HABS*/
 
+  .habs {
+    height: 130vh;
+  }
+
   .habs__title {
     display: flex;
     align-items: center;
@@ -311,12 +316,11 @@ footer {
   }
 
   .targets__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 25px;
+    flex-direction: column;
+    margin-top: 40px;
   }
 
   /*EXP*/
@@ -350,7 +354,7 @@ footer {
   /*PORT*/
 
   .port {
-    height: 240vh;
+    height: 200vh;
   }
 
   .port__title {
@@ -502,7 +506,7 @@ footer {
     gap: 20px;
     grid-template-columns: repeat(4, 250px);
     grid-template-rows: repeat(1, 300px);
-    margin-top: 20px;
+    margin-top: 25px;
   }
 
   /*EXP*/
@@ -546,7 +550,7 @@ footer {
   /*PORT*/
 
   .port {
-    height: 110vh;
+    height: 100vh;
   }
 
   .port__title {
