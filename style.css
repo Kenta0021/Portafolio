@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+html {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+:root {
+  --navbar-height: 50px;
+  --purple: rgb(142, 123, 239);
+  --blue: rgb(93, 59, 239);
+  --dark: rgb(34, 34, 34);
+  --darkgray: rgb(66, 63, 64);
+  --white: rgb(255, 255, 255);
+  --gray: rgb(110, 109, 114);
+  --ligthgray: rgb(249, 245, 242);
+
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: inherit;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+span {
+  color: var(--gray);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*NAVBAR*/
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  height: var(--navbar-height);
+}
+
+.navbar__container {
+  display: flex;
+  width: 100%;
+  height: inherit;
+  justify-content: space-between;
+}
+
+.navbar__menu {
+  width: 100%;
+  background-color: var(--white);
+}
+
+.nav__list {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn--close,
+.btn--open {
+  cursor: pointer;
+}
+
+.btn--open {
+  margin-top: 5px;
+  font-size: 25px;
+  color: var(--dark);
+}
+
+/*HOME*/
+
+.home__container {
+  display: flex;
+  justify-self: start;
+  justify-content: center;
+}
+
+.home__title {
+  font-size: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.home__icon {
+  background-color: var(--purple);
+  color: var(--white);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.mail__icon {
+  margin-right: 20px;
+  color: var(--white);
+}
+
+/*HABS*/
+
+.targets__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.habs__target {
+  background-color: var(--ligthgray);
+  margin: 5px;
+}
+
+.img__target {
+  width: 15px;
+}
+
+.targets__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/*EXP*/
+
+.exp__container {
+  display: flex;
+  margin-top: 50px;
+}
+
+.exp__icon {
+  height: 50px;
+  width: 50px;
+}
+
+/*PORT*/
+
+.port__title {
+  text-align: center;
+}
+
+.port__img {
+  height: auto;
+  width: auto;
+}
+
+/*CONTACT*/
+
+.contact__title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact__icon {
+  height: auto;
+  width: auto;
+  background-color: var(--ligthgray);
+  padding: 20px;
+  border-radius: 25%;
+}
+
+.contact__container {
+  display: flex;
+}
+
+/*FOOTER*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple);
+}
+
+@media (max-width: 500px) {
+  /*NAVBAR*/
+
+  .navbar__menu {
+    position: absolute;
+    top: -400px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 0px 15px 10px #0000005c;
+    transition: all .3s ease;
+  }
+
+  .navbar__menu.active {
+    top: 0;
+  }
+
+  .nav__list {
+    margin: 2rem 0 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn--close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 25px;
+    background-color: #fff;
+  }
+
+  /*HOME*/
+
+  .home__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo__container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home__title {
+    margin-top: 50px;
+  }
+
+  .home__paragraph {
+    text-align: center;
+  }
+
+  .home__socials {
+    display: flex;
+    margin-left: 50px;
+    width: 75%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .home__icon {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .home__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    width: 75%;
+    margin-top: 40px;
+    font-size: 15px;
+  }
+
+  /*ABOUT*/
+
+  .about {
+    height: 75vh;
+  }
+
+  .about__container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .about__title {
+    margin-bottom: 20px;
+  }
+
+  .about__paragraph {
+    text-align: center;
+  }
+
+  /*HABS*/
+
+  .habs__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .habs__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .targets__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  /*EXP*/
+
+  .exp {
+    height: 85vh;
+  }
+
+  .exp__title {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .exp__container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .exp__target {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .exp__content {
+    display: flex;
+    gap: 25px;
+  }
+
+  /*PORT*/
+
+  .port {
+    height: 240vh;
+  }
+
+  .port__title {
+    margin-top: 40px;
+  }
+
+  .port__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 25px;
+  }
+  
+  .port__img {
+    width: auto;
+    height: auto;
+  }
+
+  /*CONTACT*/
+
+  .contact__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    gap: 75px;
+  }
+}
+
+@media (min-width: 500px) {
+  /*NAVBAR*/
+
+  .home {
+    display: flex;
+  }
+
+  .navbar__button {
+    display: none;
+  }
+
+  .close__button {
+    display: none;
+  }
+
+  .nav__list {
+    gap: 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 20px;
+  }
+
+  /*HOME*/
+
+  .home {
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .photo__container {
+    width: auto;
+    height: auto;
+    margin-top: 60px;
+    margin-left: 200px;
+  }
+
+  .home__text {
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+
+  .home__title {
+    font-size: 55px;
+    text-align: start;
+    width: 50%;
+  }
+
+  .home__paragraph {
+    width: 70%;
+    text-align: start;
+  }
+
+
+  .home__socials {
+    width: 45%;
+    margin-top: 25px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: start;
+  }
+
+  button {
+    width: 50%;
+    margin-top: 45px;
+  }
+
+  /*ABOUT*/
+
+  .about {
+    height: 45vh;
+  }
+
+  .about__container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .about__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .about__paragraph {
+    width: 75vw;
+    text-align: center;
+  }
+
+  /*HABS*/
+
+  .habs {
+    height: 70vh;
+  }
+
+  .habs__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .targets__container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(1, 300px);
+    margin-top: 20px;
+  }
+
+  /*EXP*/
+
+  .exp {
+    height: 40vh;
+  }
+
+  .exp__title {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .exp__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+  }
+  
+  .exp__target {
+    display: flex;
+    gap: 25px;
+  }
+
+  .exp__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .exp__icon {
+    text-align: center;
+  }
+
+  .exp__year {
+    margin-top: 20px;
+  }
+
+  /*PORT*/
+
+  .port {
+    height: 110vh;
+  }
+
+  .port__title {
+    margin-top: 25px;
+  }
+
+  .port__container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  /*CONTACT*/
+
+  .cont {
+    height: 60vh;
+  }
+
+  .contact__container {
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    text-align: center;
+    gap: 150px;
+  }
+}
